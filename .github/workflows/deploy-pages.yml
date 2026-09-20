@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - "**"
-      - ".github/workflows/deploy- ..yml"
+      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -33,7 +33,7 @@ jobs:
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: isp-analytics-pages
+          path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
